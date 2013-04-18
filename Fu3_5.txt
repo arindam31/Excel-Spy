@@ -1,0 +1,36 @@
+
+
+Tests Completed :
+
+
+
+
+
+Issue Found :
+
+1) While Regex is ON , If multiple patterns are given , no match is found . 
+
+2) If searching multiple pattern , results will get repeated if one cell match more than one pattern . Mo point of having multiple results . We just need one instance . So a solution can be removing duplicates by making a set and then a list . 
+
+Prob : Have to make a set of every thing and that will remove the file name list to  just the one name of files .
+
+
+
+Changes :
+
+Huge ones . 
+
+1) We are sending a list of search patterns now  . So the parameter passed now is patterlist . 
+
+2) We have engulfed the initial checks (for regular expr etc) now in for loops , looping in patternlist .
+
+In our search module , 
+
+we have compared a cell with all the patterns one by one . If any search is found , its related status is captured and we break out of the loop . 
+This help in non-duplication of results . 
+
+It has been tested and its working fine in initial tests . 
+
+
+
+
